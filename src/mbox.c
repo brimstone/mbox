@@ -202,7 +202,7 @@ static void
 usage(FILE *ofp, int exitval)
 {
     fprintf(ofp, "\
-usage: sandbox [-r root] [-s] [PROG]\n\
+usage: mbox [-r root] [-s] [PROG]\n\
 \n\
         -v      : verbose mode: print unabbreviated argv, stat, termios, etc. args\n\
         -x      : print non-ascii strings in hex, -xx -- print all strings in hex\n\
@@ -1275,7 +1275,7 @@ get_os_release(void)
             error_msg_and_die("Bad OS release string: '%s'", u.release);
         /* Note: this open-codes KERNEL_VERSION(): */
         rel = (rel << 8) | atoi(p);
-        if (rel >= KERNEL_VERSION(1,0,0))
+//        if (rel >= KERNEL_VERSION(1,0,0))
             break;
         while (*p >= '0' && *p <= '9')
             p++;

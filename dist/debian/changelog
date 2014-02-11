@@ -1,3 +1,9 @@
+mbox (0.1-1) unstable; urgency=low
+
+  * Fixed for 3.12-1-amd64
+
+ -- Matt Robinson <brimstone@the.narro.ws>  Mon, 10 Feb 2014 22:05:09 -0500
+
 mbox (0.1) unstable; urgency=low
 
   * Init
