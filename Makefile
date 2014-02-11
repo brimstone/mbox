@@ -11,9 +11,11 @@ arch:
 debian:
 	(cd dist && {                                          \
 		./debian/rules build;                              \
-		./debian/rules binary-arch;                        \
-		scp ../mbox_0.1_amd64.deb                          \
-		  pdos:${DEST}/mbox-latest-amd64.deb;              \
+		fakeroot ./debian/rules binary-arch;                        \
+	})
+debian-clean:
+	(cd dist && {                                          \
+		./debian/rules clean;                              \
 	})
 
 pub:
